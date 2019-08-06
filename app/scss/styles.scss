@@ -1,0 +1,89 @@
+@import "helpers/reset";
+@import "helpers/variables";
+@import "helpers/typography";
+@import "helpers/components";
+
+#app {
+  background: $primary-bg;
+  overflow: hidden;
+}
+
+.header {
+  .row {
+    display: flex;
+    justify-content: center;
+
+    .logo {
+      max-width: 500px;
+    }
+  }
+}
+
+.table {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .card {
+      margin: 15px;
+      padding: 10px;
+      display: flex;
+      flex: 1 1 20%;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      background: $card-bg;
+      border-radius: 10px;
+      cursor: pointer;
+      .avatar {
+        position: relative;
+        margin-bottom: 15px;
+        width: 100%;
+        overflow: hidden;
+        .tape {
+          position: absolute;
+          bottom: 25%;
+          right: -50%;
+          background: #000;
+          height: 25px;
+          width: 100%;
+          transform: rotate(-45deg);
+        }
+      }
+      .overlay {
+        .content {
+          padding: 0 15px;
+          height: 50%;
+          width: 50%;
+          background: $primary-bg;
+          border-radius: 10px;
+          color: $dark-color;
+          .avatar {
+            margin-top: -20%;
+            margin-bottom: 20px;
+            img {
+              border-radius: 50%;
+            }
+          }
+          .name {
+            font-size: 24px;
+          }
+          .list {
+            margin-top: 20px;
+            text-align: left;
+            li {
+              margin-bottom: 10px;
+              .prop {
+                font-weight: 700;
+                text-transform: uppercase;
+              }
+              .val {
+                color: $light-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
